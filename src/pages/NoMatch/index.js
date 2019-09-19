@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './NoMatch.css'
+import { Link } from 'react-router-dom'
+
 export default class NoMatch extends Component {
   render() {
     return (
@@ -10,7 +12,7 @@ export default class NoMatch extends Component {
             <span class="four"><span class="screen-reader-text">4</span></span>
           </section>
           <div class="link-container">
-            <a href="/" class="more-link">Go Back</a>
+           <Link to="/" class="more-link">Go Back</Link>
           </div>
       </div>
     )
