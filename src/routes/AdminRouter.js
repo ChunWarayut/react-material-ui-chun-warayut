@@ -9,10 +9,10 @@ export default class AdminRouter extends Component {
   render() {
     return (
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/signinside" component={SignInSide} />
+        <Route exact path="/" render={(props) => <Home {...props} isAuthed={true} />}/>
+        <Route exact path="/signinside" render={(props) => <SignInSide {...props} isAuthed={true} />}/>
         {/* when none of the above match, <NoMatch> will be rendered */}
-        <Route component={NoMatch} />
+        <Route render={(props) => <NoMatch {...props} isAuthed={true} />}/>
       </Switch>
     )
   }
