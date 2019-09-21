@@ -1,96 +1,70 @@
-// import ListSubheader from '@material-ui/core/ListSubheader';
 import React from 'react';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+import ListSubheader from '@material-ui/core/ListSubheader';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
-import { Link } from "react-router-dom";
-
-import {
-  AccessAlarm,
-  ThreeDRotation,
-  BugReport,
-  Home,
-  AssignmentInd
-} from '@material-ui/icons';
+import AssignmentIcon from '@material-ui/icons/Assignment';
 
 export const mainListItems = (
   <div>
-    <ListItem button component={Link} to="/">
-      <ListItemIcon>
-        <Home />
-      </ListItemIcon>
-      <ListItemText primary="Home" />
-    </ListItem>
-    <ListItem button component={Link} to="/about">
+    <ListItem button>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <ListItemText primary="About"/>
+      <ListItemText primary="Dashboard" />
     </ListItem>
-    <ListItem button component={Link} to="/dashboard">
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="Dashboard"/>
-    </ListItem>
-    <ListItem button component={Link} to="/orders">
+    <ListItem button>
       <ListItemIcon>
         <ShoppingCartIcon />
       </ListItemIcon>
-      <ListItemText primary="Orders"/>
+      <ListItemText primary="Orders" />
     </ListItem>
-    <ListItem button component={Link} to="/customers">
+    <ListItem button>
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
-      <ListItemText primary="Customers"/>
+      <ListItemText primary="Customers" />
     </ListItem>
-    <ListItem button component={Link} to="/reports">
+    <ListItem button>
       <ListItemIcon>
         <BarChartIcon />
       </ListItemIcon>
-      <ListItemText primary="Reports"/>
+      <ListItemText primary="Reports" />
     </ListItem>
-    <ListItem button component={Link} to="/integrationg">
+    <ListItem button>
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
-      <ListItemText primary="Integrations"/>
+      <ListItemText primary="Integrations" />
     </ListItem>
   </div>
 );
 
 export const secondaryListItems = (
   <div>
-    {/* <ListSubheader inset>Saved reports</ListSubheader> */}
+    <ListSubheader inset>Saved reports</ListSubheader>
     <ListItem button>
       <ListItemIcon>
-        <AccessAlarm />
+        <AssignmentIcon />
       </ListItemIcon>
       <ListItemText primary="Current month" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <ThreeDRotation />
+        <AssignmentIcon />
       </ListItemIcon>
       <ListItemText primary="Last quarter" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <BugReport />
+        <AssignmentIcon />
       </ListItemIcon>
       <ListItemText primary="Year-end sale" />
-    </ListItem>
-    <ListItem button component={Link} to="/signinside">
-      <ListItemIcon>
-        <AssignmentInd />
-      </ListItemIcon>
-      <ListItemText primary="Sign In" />
     </ListItem>
   </div>
 );

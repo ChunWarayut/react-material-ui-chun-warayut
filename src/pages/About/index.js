@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import LoodingComponent from "../../components/Looding/";
+import React, { Component } from 'react'
+import LoodingComponent from '../../components/Looding/index'
 
-export default class About extends Component {
+export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,14 +12,14 @@ export default class About extends Component {
     setTimeout(() => {
       this.setState({
         loading: false
-      });
-    }, 2000);
+      })
+    }, 2000)
   }
   render() {
     return (
       <>
         {this.state.loading && <LoodingComponent />}
-        <div>Home</div>
+        <div>About</div>
       </>
     );
   }
